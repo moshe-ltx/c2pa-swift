@@ -32,10 +32,12 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-crypto.git", .upToNextMajor(from: "4.5.1"))
     ],
     targets: [
+        // Upstream v0.0.16 C2PAC with MinimumOSVersion 100, published by
+        // Scripts/release.sh on the lightricks/release-tools branch of moshe-ltx/c2pa-swift.
         .binaryTarget(
             name: "C2PAC",
-            url: "https://github.com/contentauth/c2pa-swift/releases/download/v0.0.16/C2PAC.xcframework.zip",
-            checksum: "45cd8beea2b1b0d4f0e000c88d98f94d0de9a671debd3bf3ac58f36a650852da"
+            url: "https://github.com/moshe-ltx/c2pa-swift/releases/download/v0.0.16-lightricks.1/C2PAC.xcframework.zip",
+            checksum: "204e3356a96ced9b250463775e1ec1407485f891a9362a79a64bd9edadb8883b"
         ),
         .target(
             name: "C2PA",
